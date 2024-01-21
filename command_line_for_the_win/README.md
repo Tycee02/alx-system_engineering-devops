@@ -1,4 +1,4 @@
-This a on Command line for the win project
+This is a Command line for the win project
 
 The demostration of how to use SFTP goes as thus:
 
