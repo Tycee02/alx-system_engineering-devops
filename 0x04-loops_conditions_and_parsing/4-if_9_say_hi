@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# loop 10 times, but for 9th iteration, displays best school then HI on a new line
+
+i=10
+
+while [ $i -gt 0 ]; do
+	echo "Best School"
+	if [ $i = 2 ]; then
+		echo "HI"
+	fi
+	i=$((i - 1))
+done
