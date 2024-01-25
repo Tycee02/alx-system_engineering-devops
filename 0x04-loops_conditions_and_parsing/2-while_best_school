@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-# Script that uses while loop to print 10 
+# uses while loop to print 10 times
 
-count=1
-while [ $count -le 10 ]; do
-	echo "Best school"
-	((count++))
+i=10
+
+while [ $i -gt 0 ]
+do
+    echo "Best School"
+    i=$((i - 1))
 done
