@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# print output by usng untill loop
+
+i=10
+
+until [ $i -eq 0 ]; do
+	echo "Best School"
+	let i=i-1
+done
