@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Display a list of cuently unning pocessess
+
+ps -auxf
