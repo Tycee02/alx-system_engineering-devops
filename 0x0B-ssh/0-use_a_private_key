@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# uses ssh to connect to the server using the private key
+# with the user ubuntu
+
+ssh -i ~/.ssh/school ubuntu@100.26.161.141
