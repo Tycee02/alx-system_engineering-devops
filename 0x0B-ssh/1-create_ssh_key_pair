@@ -2,4 +2,4 @@
 # creates an RSA key pair "school", and number of bits is 4096
 # must be protected by the passphrase betty
 
-ssh-keygen -b 4096 -N holberton -f betty
+ssh-keygen -b 4096 -f school -N betty
