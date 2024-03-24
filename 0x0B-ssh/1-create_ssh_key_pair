@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# creates an RSA key pair "school", and number of bits is 4096
+# must be protected by the passphrase betty
+
+ssh-keygen -b 4096 -f holberton -N betty
