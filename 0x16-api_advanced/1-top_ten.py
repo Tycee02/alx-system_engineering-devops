@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-# function that queries the Reddit API and returns the number of subscribers
+# function that queries the Reddit API
+# prints the titles of the first 10 hot posts listed for a given subreddit
+# If not a valid subreddit, print None
 
 import requests
 
 
-def number_of_subscribers(subreddit):
-    # Reddit API URL for getting subreddit information
+def top_ten(subreddit):
+    # Reddit API URL for getting hot posts in a subreddit
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
 
     # Set custom User-Agent to avoid errors of Too Many Requests
@@ -16,14 +18,14 @@ def number_of_subscribers(subreddit):
 
     # Check if the request was successful
     if response.status_code == 200:
-        # Extract the number of subscribers from the JSON response
+        # Extract the titles of the first 10 hot posts
         data = response.json()
-        subscribers = data['data']['subscribers']
-        return subscribers
+        posts = data['data']['children']
+        for i in range(10):
+            print("{}. {}".format(i + 1, posts[i]['data']['title']))
     elif response.status_code == 404:
-        # subreddit is not found
-        return 0
+        # If not a valid subreddit
+        print("None")
     else:
         # Other errors
         print("Error occurred while fetching subreddit data.")
-        return 0
